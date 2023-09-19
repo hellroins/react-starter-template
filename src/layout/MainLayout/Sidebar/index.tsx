@@ -9,7 +9,7 @@ import { BrowserView, MobileView } from 'react-device-detect';
 // project imports
 import MenuList from './MenuList';
 import { drawerWidth } from '../../../feature/constant';
-import Logo from '../../../assets/logo.svg';
+import Logo from '../../../assets/react.svg';
 
 // ==============================|| SIDEBAR DRAWER ||============================== //
 

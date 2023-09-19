@@ -6,7 +6,7 @@ import { Avatar, Box, ButtonBase } from '@mui/material';
 import { IconMenu2 } from '@tabler/icons-react';
 import { TypographyEntity } from '../../../themes/Typography/entities';
 
-import Logo from '../../../assets/logo.svg';
+import Logo from '../../../assets/react.svg';
 import ProfileSection from './ProfileSection';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
