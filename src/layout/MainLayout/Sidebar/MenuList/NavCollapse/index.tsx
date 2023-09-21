@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import { SetStateAction, useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation } from 'react-router';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -20,7 +19,6 @@ import config from '../../../../../config';
 const NavCollapse = (props: { menu: any; level: any; }) => {
   const { menu, level } = props;
   const theme = useTheme<TypographyEntity>();
-  const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(null);
@@ -28,9 +26,6 @@ const NavCollapse = (props: { menu: any; level: any; }) => {
   const handleClick = () => {
     setOpen(!open);
     setSelected(!selected ? menu.id : null);
-    if (menu?.id !== 'authentication') {
-      navigate(menu.children[0]?.url);
-    }
   };
 
   const { pathname } = useLocation();
@@ -149,11 +144,6 @@ const NavCollapse = (props: { menu: any; level: any; }) => {
       </Collapse>
     </>
   );
-};
-
-NavCollapse.propTypes = {
-  menu: PropTypes.object,
-  level: PropTypes.number
 };
 
 export default NavCollapse;
